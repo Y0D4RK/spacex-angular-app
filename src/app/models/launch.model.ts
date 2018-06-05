@@ -1,4 +1,4 @@
-interface Launch {
+export interface Launch {
   flight_number: number;
   mission_name: string;
   launch_year: string;
@@ -14,7 +14,7 @@ interface Launch {
   details?: string;
 }
 
-interface Links {
+export interface Links {
   mission_patch?: string;
   mission_patch_small?: string;
   article_link?: string;
@@ -27,13 +27,13 @@ interface Links {
   reddit_media?: string;
 }
 
-interface Launchsite {
+export interface Launchsite {
   site_id: string;
   site_name: string;
   site_name_long: string;
 }
 
-interface Reuse {
+export interface Reuse {
   core: boolean;
   side_core1: boolean;
   side_core2: boolean;
@@ -41,11 +41,11 @@ interface Reuse {
   capsule: boolean;
 }
 
-interface Telemetry {
+export interface Telemetry {
   flight_club?: string;
 }
 
-interface Rocket {
+export interface Rocket {
   rocket_id: string;
   rocket_name: string;
   rocket_type: string;
@@ -53,11 +53,11 @@ interface Rocket {
   second_stage: Secondstage;
 }
 
-interface Secondstage {
+export interface Secondstage {
   payloads: Payload[];
 }
 
-interface Payload {
+export interface Payload {
   payload_id: string;
   reused?: boolean;
   customers: string[];
@@ -73,7 +73,7 @@ interface Payload {
   cargo_manifest?: string;
 }
 
-interface Orbitparams {
+export interface Orbitparams {
   reference_system: string;
   regime?: string;
   longitude?: number;
@@ -86,11 +86,11 @@ interface Orbitparams {
   lifespan_years?: null | number | number;
 }
 
-interface Firststage {
+export interface Firststage {
   cores: Core[];
 }
 
-interface Core {
+export interface Core {
   core_serial?: string;
   flight?: number;
   block?: number;

@@ -1,4 +1,4 @@
-interface CompanyInfo {
+export interface Company {
     name: string;
     founder: string;
     founded: number;
@@ -15,7 +15,7 @@ interface CompanyInfo {
     summary: string;
 }
 
-interface Headquarters {
+export interface Headquarters {
     address: string;
     city: string;
     state: string;
