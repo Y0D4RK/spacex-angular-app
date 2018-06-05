@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MissionsComponent } from './missions/missions.component';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,8 @@ export class AppComponent {
       path: '/missions'
     },
     {
-      name: 'Company info',
-      path:  '/companyInfo'
+      name: 'Company',
+      path:  '/company'
     }
   ];
 

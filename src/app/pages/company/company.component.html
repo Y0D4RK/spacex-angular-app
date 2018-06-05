@@ -1,12 +1,12 @@
-<mat-card class="company-card">
+<mat-card class="company-card" *ngIf="company">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{companyInfo.name}}</mat-card-title>
-    <mat-card-subtitle>{{companyInfo.founded}}</mat-card-subtitle>
+    <mat-card-title>{{company.name}}</mat-card-title>
+    <mat-card-subtitle>{{company.founded}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <p>
-      {{companyInfo.summary}}
+      {{company.summary}}
     </p>
   </mat-card-content>
   <mat-card-actions>
