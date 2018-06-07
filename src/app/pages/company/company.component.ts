@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CompanyService } from '../../services/api';
+import { CompanyService } from '../../services';
 import { Company, CompanyEvent } from '../../models';
 
 @Component({
@@ -18,9 +18,13 @@ export class CompanyComponent implements OnInit {
       this.companyService.getCompanyInfos().subscribe(data => {
           this.company = data;
       });
-
       this.companyService.getCompanyInfosHistory().subscribe(data => {
           this.events = data;
+          this.events.forEach(function(element) {
+
+              element.dateTimeFormat = new Date(element.event_date_utc);
+          });
+
       });
 
   }

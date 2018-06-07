@@ -1,4 +1,6 @@
-.company-card{
-    height: auto;
-    width: auto;
+.company-card-info {
+    max-width: 400px;
+}
+.summary {
+    margin: 30px auto !important;
 }
