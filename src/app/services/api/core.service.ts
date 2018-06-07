@@ -16,4 +16,5 @@ export class CompanyService {
      catchError(config.handleError)
    );
   }
+
 }

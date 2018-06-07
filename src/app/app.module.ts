@@ -6,18 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
-import { MissionsComponent, CompanyComponent } from './pages';
+import { LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
-import { MaterialModule, LaunchComponent } from './shared';
+import { MaterialModule } from './shared';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     // pages
-    MissionsComponent,
+    LaunchesComponent,
     CompanyComponent,
-    LaunchComponent
   ],
   imports: [
     BrowserModule,

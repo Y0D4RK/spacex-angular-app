@@ -15,6 +15,7 @@ export class CompanyComponent implements OnInit {
       this.company = data;
     });
   }
+
   ngOnInit() {
   }
 }
