@@ -6,9 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
-import { MissionsComponent, CompanyComponent } from './pages';
+import { LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
-import { MaterialModule, LaunchComponent } from './shared';
+import { MaterialModule } from './shared';
 
 // Import the timeline library
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
@@ -17,9 +17,8 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
   declarations: [
     AppComponent,
     // pages
-    MissionsComponent,
+    LaunchesComponent,
     CompanyComponent,
-    LaunchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { MissionsComponent, CompanyComponent } from './pages';
+import { CompanyComponent, LaunchesComponent } from './pages';
 
 const appRoutes: Routes = [
-  { path: 'missions', component: MissionsComponent },
-  { path: 'company', component: CompanyComponent }
+  { path: 'company', component: CompanyComponent },
+  { path: 'launches', component: LaunchesComponent },
 ];
 
 export const AppRouting = RouterModule.forRoot(appRoutes);

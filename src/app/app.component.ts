@@ -7,21 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public menuItems = [
-    {
-      name: 'Missions',
-      path: '/missions'
-    },
+   menuItems = [
     {
       name: 'Company',
       path:  '/company'
-    }
+    },
+    {
+      name: 'Launches',
+      path: '/launches'
+    },
   ];
 
   constructor(private router: Router) {
-  }
-
-  goToMissionsPage() {
-    this.router.navigate(['/missions']);
   }
 }
