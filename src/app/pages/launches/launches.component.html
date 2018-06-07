@@ -28,7 +28,7 @@
     <ng-container matColumnDef="rocket">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Rocket </th>
       <td mat-cell *matCellDef="let row">
-        <a [routerLink]="['rockets', row.rocket.rocket_id]">{{row.rocket.rocket_name}}</a>
+        <a *ngIf="row.rocket" [routerLink]="['/rockets', row.rocket.rocket_id]">{{row.rocket.rocket_name}}</a>
       </td>
     </ng-container>
 
