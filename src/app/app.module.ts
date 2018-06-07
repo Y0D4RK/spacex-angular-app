@@ -9,6 +9,7 @@ import { AppRouting } from './app.routing';
 import { LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
 import { MaterialModule } from './shared';
+import { LaunchComponent } from './pages/launch/launch.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaterialModule } from './shared';
     // pages
     LaunchesComponent,
     CompanyComponent,
+    LaunchComponent,
   ],
   imports: [
     BrowserModule,

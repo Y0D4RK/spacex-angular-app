@@ -11,6 +11,11 @@ const baseUrl = config.baseUrl;
 export class LaunchService {
   constructor(private http: HttpClient) { }
 
+  public getLaunchByFlightNumber(flight_number: number): Observable<Launch> {
+    return this.http.get<Launch>(`${baseUrl}/launches/?flight_number=${flight_number}`).pipe(
+      catchError(config.handleError)
+    );
+  }
   public getLatestLaunch(): Observable<Launch> {
     return this.http.get<Launch>(`${baseUrl}/launches/latest`).pipe(
       catchError(config.handleError)

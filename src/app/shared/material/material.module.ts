@@ -32,4 +32,4 @@ const modules = [
   ],
   declarations: []
 })
-export class MaterialModule { }
+export class MaterialModule {}
