@@ -3,7 +3,7 @@
     <mat-card-title>{{ launch.mission_name }}</mat-card-title>
     <mat-card-subtitle>Date de lancement : {{ formatDate(launch.launch_date_utc) }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image *ngIf="launch.links" [src]="launch.links.mission_patch" [alt]="launch.mission_name">
+  <img mat-card-image *ngIf="launch.links && launch.links.mission_patch" [src]="launch.links.mission_patch" [alt]="launch.mission_name">
   <mat-card-content>
     <p>
       {{ launch.details }}

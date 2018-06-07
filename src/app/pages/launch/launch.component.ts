@@ -21,13 +21,21 @@ export class LaunchComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      const flight_number = +params['id'];
-      this.launchService.getLaunchByFlightNumber(flight_number).subscribe(data => {
-        if (data) {
-          this.launch = data[0];
-          console.log(JSON.stringify(this.launch, null,2));
-        }
-      });
+      if (params['id'] === 'next') {
+        this.launchService.getNextLaunch().subscribe(data => {
+          if (data) {
+            this.launch = data;
+            console.log(data);
+          }
+        });
+      } else {
+        const flight_number = +params['id'];
+        this.launchService.getLaunchByFlightNumber(flight_number).subscribe(data => {
+          if (data) {
+            this.launch = data[0];
+          }
+        });
+      }
     });
   }
 

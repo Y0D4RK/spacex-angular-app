@@ -24,6 +24,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "moment": "^2.22.2",
+    "ng2-date-countdown": "^1.0.2",
     "ngx-breadcrumbs": "^0.0.3",
     "rxjs": "^6.0.0",
     "rxjs-compat": "6",

@@ -1,0 +1,48 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Nombre de missions effectuées</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="count">
+          <mat-spinner *ngIf="!pastLaunchesCount" diameter="50"></mat-spinner>
+          {{ pastLaunchesCount }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Nombre de missions à venir</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="count">
+          <mat-spinner *ngIf="!nextLaunchesCount" diameter="50"></mat-spinner>
+          {{ nextLaunchesCount }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Prochaine Mission</mat-card-title>
+        <mat-card-subtitle *ngIf="nextLaunch">{{nextLaunch.name}} - {{formatDate(nextLaunch.date)}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <mat-spinner *ngIf="!nextLaunch" diameter="50"></mat-spinner>
+          <countdown [text]="text" *ngIf="nextLaunch" units="Month | Days | Hours | Minutes | Seconds"  [end]="nextLaunch.date"></countdown>
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="buttons-action">
+        <a [routerLink]="['launches', 'next']"><button mat-raised-button color="primary"><mat-icon>search</mat-icon> Voir la mission</button></a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

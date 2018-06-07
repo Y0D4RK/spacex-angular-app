@@ -16,8 +16,7 @@ export class LaunchesComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  constructor(private launchService: LaunchService,
-              private momentService: MomentService) {}
+  constructor(private launchService: LaunchService) {}
 
   ngOnInit() {
     this.launchService.getAllLaunches().subscribe(data => {

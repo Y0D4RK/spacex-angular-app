@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
+import {CountDown} from "ng2-date-countdown";
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
-import { LaunchComponent, LaunchesComponent, CompanyComponent } from './pages';
+import { HomeComponent, LaunchComponent, LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
 import { MaterialModule, BreadcrumbComponent } from './shared';
 
@@ -15,11 +16,13 @@ import { MaterialModule, BreadcrumbComponent } from './shared';
 @NgModule({
   declarations: [
     AppComponent,
+    CountDown,
     // pages
     LaunchesComponent,
     CompanyComponent,
     LaunchComponent,
     BreadcrumbComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
