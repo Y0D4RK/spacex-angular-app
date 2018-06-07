@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 import {Observable } from 'rxjs';
-import { Company } from '../../models';
+import { Company, CompanyEvent } from '../../models';
 import config from './config';
 import {catchError} from 'rxjs/operators';
 
@@ -15,6 +15,10 @@ export class CompanyService {
    return this.http.get<Company>(`${baseUrl}/info`).pipe(
      catchError(config.handleError)
    );
-  }
-
+ }
+ public getCompanyInfosHistory(): Observable<CompanyEvent> {
+    return this.http.get<CompanyEvent>(`${baseUrl}/info/history`).pipe(
+        catchError(config.handleError)
+    );
+ }
 }

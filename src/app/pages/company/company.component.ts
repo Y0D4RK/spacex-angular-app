@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../../services/api';
-import { Company } from '../../models';
+import { Company, CompanyEvent } from '../../models';
 
 @Component({
   selector: 'app-company',
@@ -9,12 +9,18 @@ import { Company } from '../../models';
 })
 export class CompanyComponent implements OnInit {
   company: Company;
+  events: CompanyEvent;
 
-  constructor(private companyService: CompanyService) {
-    this.companyService.getCompanyInfos().subscribe(data => {
-      this.company = data;
-    });
-  }
+  constructor(private companyService: CompanyService) { }
   ngOnInit() {
+
+      this.companyService.getCompanyInfos().subscribe(data => {
+          this.company = data;
+      });
+
+      this.companyService.getCompanyInfosHistory().subscribe(data => {
+          this.events = data;
+      });
+
   }
 }

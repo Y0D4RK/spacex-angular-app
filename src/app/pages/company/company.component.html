@@ -20,3 +20,31 @@
     </button>
   </mat-card-actions>
 </mat-card>
+<!-- Add the timeline -->
+<vertical-timeline *ngIf="events">
+  <!-- Add some cards to the timeline. It works with *ngFor too -->
+
+  <!-- If no value is passed for the date, the current time is used. -->
+  <vertical-timeline-card *ngFor="let event of events" [dateValue]="">
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.detail }}</p>
+    <mat-grid-list cols="3" rowHeight="3:1">
+      <h6> Links </h6>
+      <button mat-mini-fab>
+        <mat-icon aria-label="" routerLink="{{ links.reddit }}">Go!</mat-icon>
+      </button>
+      <button mat-mini-fab>
+        <mat-icon aria-label="" routerLink="{{ links.reddit }}">Go!</mat-icon>
+      </button>
+      <button mat-mini-fab>
+        <mat-icon aria-label="" routerLink="{{ links.reddit }}">Go!</mat-icon>
+      </button>
+    </mat-grid-list>
+  </vertical-timeline-card>
+
+  <!-- tomorrow = new Date(2017, 9, 20, 14,34); -->
+  <vertical-timeline-card [dateValue]="tomorrow">
+    <h1>Tomorrow</h1>
+  </vertical-timeline-card>
+
+</vertical-timeline>

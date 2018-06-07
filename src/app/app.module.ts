@@ -10,6 +10,8 @@ import { MissionsComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
 import { MaterialModule, LaunchComponent } from './shared';
 
+// Import the timeline library
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MaterialModule, LaunchComponent } from './shared';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRouting
+    AppRouting,
+    VerticalTimelineModule
   ],
   providers: [
     CompanyService,
