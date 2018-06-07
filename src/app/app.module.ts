@@ -9,6 +9,7 @@ import { AppRouting } from './app.routing';
 import { LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
 import { MaterialModule } from './shared';
+import { LaunchComponent } from './pages/launch/launch.component';
 
 // Import the timeline library
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
@@ -19,6 +20,7 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
     // pages
     LaunchesComponent,
     CompanyComponent,
+    LaunchComponent,
   ],
   imports: [
     BrowserModule,
