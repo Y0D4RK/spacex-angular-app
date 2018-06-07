@@ -15,7 +15,7 @@
 <vertical-timeline *ngIf="events">
 
   <vertical-timeline-card *ngFor="let event of events" [dateValue]="event.dateTimeFormat">
-    <h3>{{ event.title }}</h3>
+    <h6>{{ event.title }}</h6>
     <p>{{ event.detail }}</p>
     <mat-grid-list cols="3" rowHeight="3:1">
       <h6> Links </h6>
