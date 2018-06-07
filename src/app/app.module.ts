@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
-import { LaunchesComponent, CompanyComponent } from './pages';
+import { LaunchComponent, LaunchesComponent, CompanyComponent } from './pages';
 import { CompanyService, LaunchService } from './services/api';
-import { MaterialModule } from './shared';
-import { LaunchComponent } from './pages/launch/launch.component';
+import { MaterialModule, BreadcrumbComponent } from './shared';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import { LaunchComponent } from './pages/launch/launch.component';
     LaunchesComponent,
     CompanyComponent,
     LaunchComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,8 @@ import { LaunchComponent } from './pages/launch/launch.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRouting
+    AppRouting,
+    McBreadcrumbsModule.forRoot()
   ],
   providers: [
     CompanyService,
