@@ -6,7 +6,7 @@ import {
   MatIconModule, MatInputModule,
   MatListModule, MatPaginatorModule,
   MatSidenavModule, MatTableModule,
-  MatToolbarModule, MatSortModule
+  MatToolbarModule, MatSortModule,
 } from '@angular/material';
 
 const modules = [
@@ -20,7 +20,7 @@ const modules = [
   MatPaginatorModule,
   MatCardModule,
   MatInputModule,
-  MatSortModule
+  MatSortModule,
 ];
 
 @NgModule({
