@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
    menuItems = [
+     {
+       name: 'Home',
+       path:  '/'
+     },
     {
-      name: 'Company',
+      name: 'Company Informations',
       path:  '/company'
     },
     {
-      name: 'Launches',
+      name: 'Missions',
       path: '/launches'
     },
   ];
