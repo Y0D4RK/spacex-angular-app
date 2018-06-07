@@ -1,0 +1,18 @@
+<mat-card class="example-card" *ngIf="launch">
+  <mat-card-header>
+    <mat-card-title>{{ launch.mission_name }}</mat-card-title>
+    <mat-card-subtitle>Date de lancement : {{ formatDate(launch.launch_date_utc) }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image *ngIf="launch.links" [src]="launch.links.mission_patch" [alt]="launch.mission_name">
+  <mat-card-content>
+    <p>
+      {{ launch.details }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="buttons-action" *ngIf="launch.links">
+    <a [hidden]="!launch.links.presskit" [href]="launch.links.presskit" target="_blank" class="mr-10"><button mat-raised-button color="primary"><mat-icon>cloud_download</mat-icon> Kit de presse</button></a>
+    <a [hidden]="!launch.links.wikipedia" [href]="launch.links.wikipedia" target="_blank" class="mr-10"><button mat-raised-button color="primary"><mat-icon>book</mat-icon> Wikipedia</button></a>
+    <a [hidden]="!launch.links.video_link" [href]="launch.links.video_link" target="_blank" class="mr-10"><button mat-raised-button color="primary"><mat-icon>music_video</mat-icon> Vidéo</button></a>
+    <a [hidden]="!launch.links.article_link" [href]="launch.links.article_link" target="_blank"><button mat-raised-button color="primary"><mat-icon>insert_link</mat-icon> Article</button></a>
+  </mat-card-actions>
+</mat-card>
