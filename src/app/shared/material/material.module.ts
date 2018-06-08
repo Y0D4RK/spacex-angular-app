@@ -3,10 +3,19 @@ import {
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatIconModule, MatInputModule,
-    MatListModule, MatPaginatorModule,
-    MatSidenavModule, MatTableModule,
-    MatToolbarModule, MatSortModule, MatGridListModule
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSortModule,
+    MatGridListModule,
+    MatStepperModule,
+    MatExpansionModule,
+    MatChipsModule,
+    MatBadgeModule,
 } from '@angular/material';
 
 const modules = [
@@ -21,7 +30,11 @@ const modules = [
   MatCardModule,
   MatInputModule,
   MatSortModule,
-  MatGridListModule
+  MatGridListModule,
+  MatStepperModule,
+  MatExpansionModule,
+  MatChipsModule,
+  MatBadgeModule
 ];
 
 @NgModule({

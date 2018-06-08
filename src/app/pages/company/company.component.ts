@@ -20,12 +20,10 @@ export class CompanyComponent implements OnInit {
       });
       this.companyService.getCompanyInfosHistory().subscribe(data => {
           this.events = data;
+          console.log(this.events);
           this.events.forEach(function(element) {
-
               element.dateTimeFormat = new Date(element.event_date_utc);
           });
-
       });
-
   }
 }
