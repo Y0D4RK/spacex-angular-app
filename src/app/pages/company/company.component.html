@@ -13,17 +13,16 @@
 </mat-card>
 <br><br>
 <mat-card *ngIf="company">
-  <mat-card-header class="elon-card-header" style="padding: 20px;">
-    <div mat-card-avatar class="founder-avatar"></div>
+  <div mat-card-avatar class="founder-avatar"><img src="../../assets/images/elon_musk.jpg" height="179" ></div>
+  <mat-card-header class="elon-card-header" style="padding: 20px; padding-left: 300px">
     <mat-card-title>By {{ company.founder }}</mat-card-title>
     <mat-card-subtitle>SpaceX created in {{ company.founded }}</mat-card-subtitle>
     <mat-card-subtitle>And own {{ company.launch_sites }} launch sites around the world</mat-card-subtitle>
   </mat-card-header>
 </mat-card>
-
-
+<h1 style="padding: 0; margin-bottom: 0; text-decoration: underline; color: #fff;">FOR YOU, OUR EVENTS: </h1>
 <!-- Add the timeline -->
-<vertical-timeline *ngIf="events">
+<vertical-timeline *ngIf="events" style="margin-top: 0;">
   <vertical-timeline-card *ngFor="let event of events; let i = index" [dateValue]="event.dateTimeFormat">
     <h5>{{ event.title }}</h5>
     <p>{{ event.details }}</p>
