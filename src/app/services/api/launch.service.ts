@@ -16,6 +16,7 @@ export class LaunchService {
       catchError(config.handleError)
     );
   }
+
   public getLatestLaunch(): Observable<Launch> {
     return this.http.get<Launch>(`${baseUrl}/launches/latest`).pipe(
       catchError(config.handleError)

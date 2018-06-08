@@ -1,10 +1,25 @@
 import { Routes, RouterModule } from '@angular/router';
-import { CompanyComponent, LaunchesComponent, LaunchComponent } from './pages';
+import { HomeComponent, CompanyComponent, LaunchesComponent, LaunchComponent, RocketComponent, RocketsComponent } from './pages';
 
 const appRoutes: Routes = [
-  { path: 'company', component: CompanyComponent, data: { breadcrumb: 'company'}},
-  { path: 'launches/:id', component: LaunchComponent, data: { breadcrumb: 'company'}},
-  { path: 'launches', component: LaunchesComponent, data: { breadcrumb: 'company'}},
+  { path: '', data: { breadcrumbs: 'Accueil'},
+    children: [
+      { path: '', component: HomeComponent},
+      { path: 'company', component: CompanyComponent, data: { breadcrumbs: 'Infos sur la compagnie'}},
+      { path: 'launches', data: { breadcrumbs: 'Missions'},
+        children: [
+          { path: '', component: LaunchesComponent},
+          { path: ':id', component: LaunchComponent, data: { breadcrumbs: 'Détails d\'une mission'}},
+        ]
+      },
+      { path: 'rockets', data: { breadcrumbs: 'Roquettes'},
+        children: [
+          { path: '', component: RocketsComponent},
+          { path: ':id', component: RocketComponent, data: { breadcrumbs: 'Détails d\'une roquette'}},
+        ]
+      },
+    ]
+  },
 ];
 
 export const AppRouting = RouterModule.forRoot(appRoutes);

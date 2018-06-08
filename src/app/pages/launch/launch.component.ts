@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Location} from '@angular/common';
 import {LaunchService, MomentService } from '../../services';
 import { Launch } from '../../models';
 
@@ -15,19 +14,22 @@ export class LaunchComponent implements OnInit, OnDestroy {
   private sub: any;
 
   constructor(private route: ActivatedRoute,
-              private launchService: LaunchService,
-              private momentService: MomentService,
-              private _location: Location) {}
+              private launchService: LaunchService) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      const flight_number = +params['id'];
-      this.launchService.getLaunchByFlightNumber(flight_number).subscribe(data => {
-        if (data) {
-          this.launch = data[0];
-          console.log(JSON.stringify(this.launch, null,2));
-        }
-      });
+      if (params['id'] === 'next') {
+        this.launchService.getNextLaunch().subscribe(data => {
+            this.launch = data;
+        });
+      } else {
+        const flight_number = +params['id'];
+        this.launchService.getLaunchByFlightNumber(flight_number).subscribe(data => {
+          if (data) {
+            this.launch = data[0];
+          }
+        });
+      }
     });
   }
 

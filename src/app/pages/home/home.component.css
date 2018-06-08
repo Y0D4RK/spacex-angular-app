@@ -1,0 +1,22 @@
+mat-grid-tile {
+  text-align: center;
+  vertical-align: center;
+}
+mat-grid-list {
+  width: 80vw;
+}
+
+countdown {
+  font-size: 20px;
+}
+.count {
+  font-size: 75px;
+}
+
+.example-card {
+  width: 90%;
+  height: 90%;
+}
+md-progress-spinner {
+  margin:0 auto;
+}
