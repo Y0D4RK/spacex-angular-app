@@ -20,7 +20,7 @@
     <mat-card-subtitle>And own {{ company.launch_sites }} launch sites around the world</mat-card-subtitle>
   </mat-card-header>
 </mat-card>
-<h1 style="padding: 0; margin-bottom: 0; text-decoration: underline; color: #fff;">FOR YOU, OUR EVENTS: </h1>
+<h1 style="padding: 0; margin-bottom: 0; text-decoration: underline; color: #fff;">FOR YOU, OUR EVENTS:</h1>
 <!-- Add the timeline -->
 <vertical-timeline *ngIf="events" style="margin-top: 0;">
   <vertical-timeline-card *ngFor="let event of events; let i = index" [dateValue]="event.dateTimeFormat">
