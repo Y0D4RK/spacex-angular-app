@@ -8,7 +8,8 @@ import {CountDown} from 'ng2-date-countdown';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
-import { HomeComponent, LaunchComponent, LaunchesComponent, CompanyComponent, RocketComponent } from './pages';
+import { HomeComponent, LaunchComponent, LaunchesComponent,
+  CompanyComponent, RocketComponent, RocketsComponent } from './pages';
 import { CompanyService, LaunchService, RocketService } from './services/api';
 import { MaterialModule, BreadcrumbComponent, TreeComponent } from './shared';
 
@@ -20,9 +21,11 @@ import { MaterialModule, BreadcrumbComponent, TreeComponent } from './shared';
     LaunchesComponent,
     CompanyComponent,
     LaunchComponent,
-    BreadcrumbComponent,
     HomeComponent,
     RocketComponent,
+    RocketsComponent,
+    // shared
+    BreadcrumbComponent,
     TreeComponent,
   ],
   imports: [

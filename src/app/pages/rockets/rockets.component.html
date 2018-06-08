@@ -1,0 +1,10 @@
+<mat-accordion *ngIf="rockets">
+  <mat-expansion-panel *ngFor="let rocket of rockets">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <button mat-button [routerLink]="['/rockets', rocket.id]">{{ rocket.name }}</button>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    {{ rocket.description }}
+  </mat-expansion-panel>
+</mat-accordion>

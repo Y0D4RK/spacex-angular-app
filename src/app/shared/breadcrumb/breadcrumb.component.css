@@ -4,6 +4,7 @@
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
+  cursor:pointer;
 }
 .breadcrumb > li {
   display: inline-block;
