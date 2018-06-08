@@ -8,10 +8,14 @@ import {CountDown} from 'ng2-date-countdown';
 
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
+
 import { HomeComponent, LaunchComponent, LaunchesComponent,
   CompanyComponent, RocketComponent, RocketsComponent } from './pages';
 import { CompanyService, LaunchService, RocketService } from './services/api';
 import { MaterialModule, BreadcrumbComponent, TreeComponent } from './shared';
+
+// Import the timeline library
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { MaterialModule, BreadcrumbComponent, TreeComponent } from './shared';
     BrowserAnimationsModule,
     MaterialModule,
     AppRouting,
+    VerticalTimelineModule,
     McBreadcrumbsModule.forRoot()
   ],
   providers: [

@@ -471,6 +471,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-vertical-timeline@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/angular-vertical-timeline/-/angular-vertical-timeline-0.6.0.tgz#5e949741c2a2ceee37a30c5245195c86745da90d"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"

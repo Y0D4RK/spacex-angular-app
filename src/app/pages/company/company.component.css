@@ -1,4 +1,94 @@
-.company-card{
-    height: auto;
-    width: auto;
+::ng-deep .container{
+    font-family: "Courier new";
+}
+::ng-deep .mat-card-content{
+    width: 100%;
+    text-align: center;
+    font-size: 18px !important;
+    margin-top: 20px;
+}
+::ng-deep .mat-card-title{
+    font-size: 30px !important;
+}
+.mat-card{
+    padding: 0;
+}
+.mat-list .mat-list-item{
+    height: 20px;
+}
+::ng-deep .inner-content{
+    margin-top: 80px;
+    padding-bottom: 10px;
+}
+::ng-deep .timeline-content{
+    border-radius: 8px;
+}
+::ng-deep .inner-content h5{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 0;
+}
+/*::ng-deep .timeline-content{*/
+    /*margin-top: 30px;*/
+/*}*/
+::ng-deep .date{
+    padding-left: 70%;
+    font-size: 18px;
+    font-family: "Courier new";
+    color: #fff;
+    margin-top: 0;
+    background-color: #444 !important;
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+}
+::ng-deep .timeline-content::after{
+    border-color: transparent transparent transparent #444 !important;
+}
+::ng-deep .timeline-item:nth-child(even) .timeline-content::after{
+    border-color: transparent #444 transparent transparent !important;
+}
+::ng-deep .timeline::before{
+    border-right: 1px solid #000;
+    background-color: #fff;
+}
+::ng-deep .timeline-img p{
+    line-height: 0!important;
+    font-weight: bolder;
+}
+::ng-deep .timeline-img p{
+    color: #333 !important;
+}
+::ng-deep .timeline-img{
+    background-color: #fff !important;
+    border-right: 1px solid #333;
+    border-radius: 4px;
+}
+.mat-card-image{
+    display: block;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+}
+.mat-raised-button{
+    margin: 5px 10px 0 10px;
+}
+.btn-reddit{
+    background-color: #1d2555;
+    color: #fff;
+}
+.btn-article{
+    background-color: #2c3c82;
+    color: #fff;
+}
+.btn-wikipedia{
+    background-color: #546bf0;
+    color: #fff;
+}
+.summary {
+    margin: 30px auto !important;
+    font-size: 20px;
 }

@@ -8,7 +8,8 @@ import {
   MatSidenavModule, MatTableModule,
   MatToolbarModule, MatSortModule,
   MatGridListModule, MatProgressSpinnerModule,
-  MatTreeModule, MatExpansionModule
+  MatTreeModule, MatExpansionModule,
+  MatChipsModule, MatBadgeModule
 } from '@angular/material';
 
 const modules = [
@@ -24,6 +25,11 @@ const modules = [
   MatInputModule,
   MatSortModule,
   MatGridListModule,
+  MatBadgeModule,
+  MatStepperModule,
+  MatExpansionModule,
+  MatChipsModule,
+  MatBadgeModule
   MatProgressSpinnerModule,
   MatTreeModule,
   MatExpansionModule

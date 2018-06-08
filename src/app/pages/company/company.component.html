@@ -1,22 +1,58 @@
 <mat-card class="company-card" *ngIf="company">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{company.name}}</mat-card-title>
-    <mat-card-subtitle>{{company.founded}}</mat-card-subtitle>
+    <img mat-card-image class="company-image" src="../../assets/images/logo_spacex.png">
+    <!--<mat-card-title class="main-title">{{company.title}}</mat-card-title>-->
+    <!--<mat-card-subtitle class="date-founded">{{company.founded}}</mat-card-subtitle>-->
   </mat-card-header>
   <mat-card-content>
-    <p>
-      {{company.summary}}
-    </p>
+    <p class="summary">{{company.summary}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>
-      <mat-icon>thumb_up</mat-icon>
-      LIKE
-    </button>
-    <button mat-raised-button color="primary">
-      <mat-icon>share</mat-icon>
-      SHARE
-    </button>
+
   </mat-card-actions>
 </mat-card>
+<br><br>
+<mat-card *ngIf="company">
+  <div mat-card-avatar class="founder-avatar"><img src="../../assets/images/elon_musk.jpg" height="179" ></div>
+  <mat-card-header class="elon-card-header" style="padding: 20px; padding-left: 300px">
+    <mat-card-title>By {{ company.founder }}</mat-card-title>
+    <mat-card-subtitle>SpaceX created in {{ company.founded }}</mat-card-subtitle>
+    <mat-card-subtitle>And own {{ company.launch_sites }} launch sites around the world</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+<h1 style="padding: 0; margin-bottom: 0; text-decoration: underline; color: #fff;">FOR YOU, OUR EVENTS:</h1>
+<!-- Add the timeline -->
+<vertical-timeline *ngIf="events" style="margin-top: 0;">
+  <vertical-timeline-card *ngFor="let event of events; let i = index" [dateValue]="event.dateTimeFormat">
+    <h5>{{ event.title }}</h5>
+    <p>{{ event.details }}</p>
+    <hr>
+      <a *ngIf="event.flight_number" [routerLink]="['/', 'launches', event.flight_number]">GO TO LAUNCHES</a>
+    <hr>
+    <mat-grid-list cols="3" rowHeight="3:1">
+      <a mat-raised-button href="{{ event.links.reddit }}" class="btn-reddit" target="_blank">Visit reddit.</a>
+      <a mat-raised-button href="{{ event.links.article }}" class="btn-article" target="_blank">Visit article.</a>
+      <a mat-raised-button href="{{ event.links.wikipedia }}" class="btn-wikipedia" target="_blank">Visit wikipedia.</a>
+    </mat-grid-list>
+  </vertical-timeline-card>
+</vertical-timeline>
+<!--<mat-accordion>-->
+  <!--<mat-expansion-panel>-->
+    <!--<mat-expansion-panel-header>-->
+      <!--<mat-panel-title>-->
+        <!--Timeline-->
+      <!--</mat-panel-title>-->
+    <!--</mat-expansion-panel-header>-->
+    <!--<mat-vertical-stepper #stepper *ngIf="events">-->
+      <!--<mat-step *ngFor="let events of event">-->
+        <!--<ng-template matStepLabel>-->
+          <!--{{ event.title }}-->
+          <!--<mat-chip-list>-->
+            <!--<mat-chip color="primary">{{event.event_date_utc | date:'dd-MM-yyyy'}}</mat-chip>-->
+          <!--</mat-chip-list>-->
+        <!--</ng-template>-->
+        <!--<pre>{{event.details}}</pre>-->
+      <!--</mat-step>-->
+    <!--</mat-vertical-stepper>-->
+  <!--</mat-expansion-panel>-->
+<!--</mat-accordion>-->
