@@ -16,8 +16,8 @@ export class CompanyService {
      catchError(config.handleError)
    );
  }
- public getCompanyInfosHistory(): Observable<CompanyEvent> {
-    return this.http.get<CompanyEvent>(`${baseUrl}/info/history`).pipe(
+ public getCompanyInfosHistory(): Observable<CompanyEvent[]> {
+    return this.http.get<CompanyEvent[]>(`${baseUrl}/info/history`).pipe(
         catchError(config.handleError)
     );
  }

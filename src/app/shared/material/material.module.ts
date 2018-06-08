@@ -9,7 +9,7 @@ import {
   MatToolbarModule, MatSortModule,
   MatGridListModule, MatProgressSpinnerModule,
   MatTreeModule, MatExpansionModule,
-  MatChipsModule, MatBadgeModule
+  MatChipsModule, MatBadgeModule, MatStepperModule
 } from '@angular/material';
 
 const modules = [
@@ -29,7 +29,7 @@ const modules = [
   MatStepperModule,
   MatExpansionModule,
   MatChipsModule,
-  MatBadgeModule
+  MatBadgeModule,
   MatProgressSpinnerModule,
   MatTreeModule,
   MatExpansionModule

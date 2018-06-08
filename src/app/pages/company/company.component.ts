@@ -9,7 +9,7 @@ import { Company, CompanyEvent } from '../../models';
 })
 export class CompanyComponent implements OnInit {
   company: Company;
-  events: CompanyEvent;
+  events: CompanyEvent[];
 
   constructor(private companyService: CompanyService) { }
 
