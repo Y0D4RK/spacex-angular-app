@@ -1,3 +1,6 @@
+::ng-deep .container{
+    font-family: "Courier new";
+}
 ::ng-deep .mat-card-content{
     width: 100%;
     text-align: center;
@@ -25,7 +28,6 @@
     top: 30px;
     left: 20px;
     font-size: 18px;
-    font-family: "Trebuchet MS";
     color: #fff;
     margin-top: 0;
 }
@@ -33,9 +35,9 @@
     /*margin-top: 30px;*/
 /*}*/
 ::ng-deep .date{
-    padding-left: 74%;
+    padding-left: 70%;
     font-size: 18px;
-    font-family: "Trebuchet MS";
+    font-family: "Courier new";
     color: #fff;
     margin-top: 0;
     background-color: #444 !important;
@@ -43,18 +45,19 @@
     border-bottom: 2px solid #ddd;
     width: 100%;
 }
-::ng-deep .timeline-item:nth-child(even) .timeline-content::after{
-    border-color: transparent #444 transparent transparent !important;
-}
 ::ng-deep .timeline-content::after{
     border-color: transparent transparent transparent #444 !important;
 }
+::ng-deep .timeline-item:nth-child(even) .timeline-content::after{
+    border-color: transparent #444 transparent transparent !important;
+}
 ::ng-deep .timeline::before{
-    /*border-right: 1px solid #000;*/
+    border-right: 1px solid #000;
     background-color: #fff;
 }
 ::ng-deep .timeline-img p{
     line-height: 0!important;
+    font-weight: bolder;
 }
 ::ng-deep .timeline-img p{
     color: #333 !important;
@@ -84,4 +87,8 @@
 .btn-wikipedia{
     background-color: #546bf0;
     color: #fff;
+}
+.summary {
+    margin: 30px auto !important;
+    font-size: 20px;
 }
