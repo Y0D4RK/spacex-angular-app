@@ -11,6 +11,16 @@
 
   </mat-card-actions>
 </mat-card>
+<br><br>
+<mat-card *ngIf="company">
+  <mat-card-header class="elon-card-header" style="padding: 20px;">
+    <div mat-card-avatar class="founder-avatar"></div>
+    <mat-card-title>By {{ company.founder }}</mat-card-title>
+    <mat-card-subtitle>SpaceX created in {{ company.founded }}</mat-card-subtitle>
+    <mat-card-subtitle>And own {{ company.launch_sites }} launch sites around the world</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
 
 <!-- Add the timeline -->
 <vertical-timeline *ngIf="events">

@@ -4,6 +4,9 @@
     font-size: 18px !important;
     margin-top: 20px;
 }
+::ng-deep .mat-card-title{
+    font-size: 30px !important;
+}
 .mat-card{
     padding: 0;
 }
