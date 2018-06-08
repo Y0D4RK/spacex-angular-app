@@ -45,4 +45,23 @@
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Dernière mission effectuée</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <mat-spinner *ngIf="!latestLaunch" diameter="50"></mat-spinner>
+        <div *ngIf="latestLaunch">
+          <img  class="latest-launch" width="100" *ngIf="latestLaunch.links && latestLaunch.links.mission_patch_small" [src]="latestLaunch.links.mission_patch_small" [alt]="latestLaunch.mission_name">
+          <h3>{{latestLaunch.mission_name}}</h3>
+          <h4>{{formatDate(latestLaunch.mission_name)}}</h4>
+          <a [routerLink]="['launches', latestLaunch.flight_number]"><button mat-raised-button color="primary"><mat-icon>search</mat-icon> Voir la mission</button></a>
+        </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
