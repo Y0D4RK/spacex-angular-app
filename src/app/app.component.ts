@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +8,21 @@ import { Router } from '@angular/router';
 export class AppComponent {
    menuItems = [
      {
-       name: 'Home',
+       name: 'Accueil',
        path:  '/'
      },
     {
-      name: 'Company Informations',
+      name: 'Infos sur la companie',
       path:  '/company'
     },
     {
       name: 'Missions',
       path: '/launches'
     },
+     {
+       name: 'Roquettes',
+       path: '/rockets'
+     },
   ];
-
-  constructor(private router: Router) {
-  }
+  constructor() {}
 }
